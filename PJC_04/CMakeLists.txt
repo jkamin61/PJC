@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.29)
+project(PJC_04)
+
+include(FetchContent)
+
+FetchContent_Declare(
+        fmt
+        GIT_REPOSITORY https://github.com/fmtlib/fmt
+        GIT_TAG 11.0.2
+)
+
+FetchContent_MakeAvailable(fmt)
+
+add_executable(PJC_04 main.cpp)
+target_link_libraries(PJC_04 fmt)
